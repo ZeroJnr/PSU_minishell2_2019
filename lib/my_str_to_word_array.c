@@ -11,7 +11,7 @@ int word_size(char const *str, int i)
 {
     int wc = 0;
 
-    for (;str[i] != '\n' && str[i] != '\0'; i++, wc++);
+    for (; str[i] != ' ' && str[i] != '\n' && str[i] != '\0'; i++, wc++);
     return (wc);
 }
 
@@ -23,7 +23,7 @@ char **str_to_word_array(char const *str)
     for (int i = 0; str[i] != '\0'; i++, cword++) {
         words[cword] = malloc(sizeof(char) * word_size(str, i) + 1);
         words[cword][word_size(str, i)] = '\0';
-        for (int j = 0;str[i] != '\n' &&
+        for (int j = 0; str[i] != ' ' && str[i] != '\n' &&
         str[i] != '\0'; i++, j++) {
             words[cword][j] = str[i];
         }

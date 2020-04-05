@@ -32,5 +32,6 @@ int my_strcmp(char const *str, char const *to_find);
 int my_fill_double(char *filepath);
 int getstat(char const *filepath);
 char *my_strcat(char *str1, char *str2);
+int my_chr(char *str , char to_find);
 
 #endif

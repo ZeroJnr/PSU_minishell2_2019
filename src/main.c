@@ -5,3 +5,16 @@
 ** minishell2
 */
 
+#include "proto_minishell.h"
+
+int main(__attribute__((unused)) int argc, char *argv[], char **env)
+{
+    index_t index = {0};
+    index.arg.av = argv;
+    index.arg.ev = env;
+
+    my_setenv("BONJOUR", "bite", &index);
+    minishell_core(&index);
+    my_free(&index);
+    return 0;
+}

@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "proto_minishell.h": "c",
+        "types.h": "c",
+        "stdlib.h": "c",
+        "signal.h": "c",
+        "unistd.h": "c",
+        "stdio.h": "c"
+    }
+}

@@ -25,8 +25,9 @@ LIB	=	$(DIR)my_length.c	\
 		$(DIR)my_fill_double.c  \
 		$(DIR)my_strcat.c   \
 		$(DIR)getstat.c \
+		$(DIR)my_chr.c	\
 
-CFLAGS = -Wall -Wextra -g
+CFLAGS = -Wall -Wextra
 
 OBJ	=	$(LIB:.c=.o)
 

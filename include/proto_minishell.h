@@ -8,12 +8,20 @@
 #ifndef PROTO_SHELL
 #define PROTO_SHELL
 
-#include <sys/types.h>
-#include <sys/wait.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include <fcntl.h>
+#include "struct.h"
+#include "proto_lib.h"
+#include "macro.h"
+
+void exit_err(void);
+char *my_getenv(char **env, char *path);
+char *delete_whitespace(char const *buffer);
+char **cut_my_cmd(char const *str);
+void exec_cmd(index_t *index);
+void minishell_core(index_t *index);
+void my_free(index_t *index);
+void checking_acces(index_t *index);
+char *delete_slash(index_t *index, int nb);
+void exit_cmd(char *buffer);
+int my_setenv(char *path, char *value, index_t *index);
 
 #endif /* !PROTO_SHELL */
