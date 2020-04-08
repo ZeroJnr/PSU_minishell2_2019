@@ -11,7 +11,8 @@
 
 void exit_cmd(char *buffer)
 {
-    if(buffer[0] == 'e' && buffer[1] == 'x' && buffer[2] == 'i'\
-    && buffer[3] == 't' && buffer[4] == 't')
-        printf("ok\n");
+    if (my_strncmp(buffer, "exit", my_lenght("exit")) == 0) {
+        printf("exit\n");
+        exit(84);
+    }
 }

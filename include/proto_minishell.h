@@ -24,5 +24,9 @@ char *delete_slash(index_t *index, int nb);
 void exit_cmd(char *buffer);
 int my_setenv(char *path, char *value, index_t *index);
 int my_unsetenv(char *buffer, index_t *index);
+void wait_cmd(index_t *index);
+void print_prompt(index_t *index);
+int my_pipe(index_t *index);
+int my_redirection(index_t *index);
 
 #endif /* !PROTO_SHELL */
