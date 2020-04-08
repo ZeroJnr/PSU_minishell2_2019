@@ -16,9 +16,8 @@ char *my_getenv(char **env, char *path)
 
     for (int y = 0; env[y]; y++) {
         counter = my_strncmp(env[y], path, my_lenght(path));
-        if (counter == 0) {
+        if (counter == 0)
             buffer = my_strdup(env[y] + 5);
-        }
     }
     return buffer;
 }

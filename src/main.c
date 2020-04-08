@@ -13,7 +13,6 @@ int main(__attribute__((unused)) int argc, char *argv[], char **env)
     index.arg.av = argv;
     index.arg.ev = env;
 
-    my_setenv("BONJOUR", "bite", &index);
     minishell_core(&index);
     my_free(&index);
     return 0;

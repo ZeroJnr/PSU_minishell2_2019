@@ -23,5 +23,6 @@ void checking_acces(index_t *index);
 char *delete_slash(index_t *index, int nb);
 void exit_cmd(char *buffer);
 int my_setenv(char *path, char *value, index_t *index);
+int my_unsetenv(char *buffer, index_t *index);
 
 #endif /* !PROTO_SHELL */

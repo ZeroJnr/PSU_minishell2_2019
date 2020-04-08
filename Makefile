@@ -22,6 +22,7 @@ SRC	=	$(SRC_MANAGE)minishell_core.c	\
 		$(SRC_CMD)exit_cmd.c	\
 		$(SRC_MANAGE)delete_slash.c	\
 		$(SRC_BUILTIN)setenv.c	\
+		$(SRC_BUILTIN)unstenv.c	\
 
 SRC_BUILD   =   $(SRC) $(SRC_DIR)main.c \
 
