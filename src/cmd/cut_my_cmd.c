@@ -8,6 +8,18 @@
 #include "proto_minishell.h"
 #include <stdlib.h>
 
+static int total_words_new(char const *str)
+{
+    int tw = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ' || str[i] == '\n' || str[i] != '\0') {
+            tw++;
+        }
+    }
+    return (tw);
+}
+
 int new_word_size(char const *str, int i)
 {
     int wc = 0;
@@ -19,7 +31,7 @@ int new_word_size(char const *str, int i)
 char **cut_my_cmd(char const *str)
 {
     int cword = 0;
-    char **words = malloc(sizeof(char *) * total_words(str));
+    char **words = malloc(sizeof(char *) * total_words_new(str));
 
     for (int i = 0; str[i] != '\0'; i++, cword++) {
         words[cword] = malloc(sizeof(char) * new_word_size(str, i) + 1);

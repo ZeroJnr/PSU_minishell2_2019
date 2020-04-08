@@ -8,6 +8,16 @@
 #include "proto_minishell.h"
 #include <stdio.h>
 
+void unsetenv_cmd(char *path, index_t *index)
+{
+    char **buffer = str_to_word_array(path);
+
+    if (my_strncmp(buffer[0], "unsetenv", my_lenght("unsetenv")) == 0) {
+        my_unsetenv(buffer[1], index);
+        index->my_bool.built = true;
+    }
+}
+
 int my_unsetenv(char *buffer, index_t *index)
 {
     int y = 0;

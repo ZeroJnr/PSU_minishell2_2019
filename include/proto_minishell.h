@@ -21,12 +21,15 @@ void minishell_core(index_t *index);
 void my_free(index_t *index);
 void checking_acces(index_t *index);
 char *delete_slash(index_t *index, int nb);
-void exit_cmd(char *buffer);
+void exit_cmd(char *buffer, index_t *index);
 int my_setenv(char *path, char *value, index_t *index);
 int my_unsetenv(char *buffer, index_t *index);
 void wait_cmd(index_t *index);
 void print_prompt(index_t *index);
 int my_pipe(index_t *index);
 int my_redirection(index_t *index);
+int my_env(index_t *index, char *buffer);
+void unsetenv_cmd(char *buffer, index_t *index);
+void setenv_cmd(char *path, index_t *index);
 
 #endif /* !PROTO_SHELL */

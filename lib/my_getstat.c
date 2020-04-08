@@ -7,7 +7,7 @@
 
 #include "proto.h"
 
-int getstat(char const *filepath)
+int my_getstat(char const *filepath)
 {
     struct stat buf = {0};
 

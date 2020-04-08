@@ -7,7 +7,19 @@
 
 #include "proto.h"
 
-int word_size(char const *str, int i)
+static int total_words(char const *str)
+{
+    int tw = 0;
+
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == ' ' || str[i] == '\n' || str[i] != '\0') {
+            tw++;
+        }
+    }
+    return (tw);
+}
+
+static int word_size(char const *str, int i)
 {
     int wc = 0;
 

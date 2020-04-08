@@ -6,13 +6,14 @@
 */
 
 #include "proto.h"
+#include <stdbool.h>
 
-int my_chr(char *str , char to_find)
+int my_strchr(char *str , char to_find)
 {
     int idx = 0;
 
     for (idx = 0; str[idx]; idx++)
         if (str[idx] == to_find)
-            return idx;
-    return -1;
+            return true;
+    return false;
 }

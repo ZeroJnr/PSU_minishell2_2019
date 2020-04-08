@@ -12,6 +12,7 @@ int main(__attribute__((unused)) int argc, char *argv[], char **env)
     index_t index = {0};
     index.arg.av = argv;
     index.arg.ev = env;
+    index.my_bool.built = false;
 
     minishell_core(&index);
     my_free(&index);

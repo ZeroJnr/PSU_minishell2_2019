@@ -36,7 +36,7 @@ void exec_cmd(index_t *index)
 
     if (my_forking(pid) == true) {
         checking_acces(index);
-        if (execve(PATH, CMD, ENV) == -1) {
+        if (execve(PATH, CMD, ENV) == -1 && index->my_bool.built == false) {
             my_putstr(CMD[0]);
             my_putstr(": Command not found\n");
         }

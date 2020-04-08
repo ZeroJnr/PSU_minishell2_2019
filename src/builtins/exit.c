@@ -9,10 +9,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void exit_cmd(char *buffer)
+void exit_cmd(char *buffer, index_t *index)
 {
     if (my_strncmp(buffer, "exit", my_lenght("exit")) == 0) {
         printf("exit\n");
+        my_free(index);
         exit(84);
     }
 }
